@@ -2,12 +2,8 @@ interface EventListeners {
   update(filename: string): void
 }
 
-class EventManager implements EventListeners {
+class EventManager {
   private listeners: [string, EventListeners][] = []
-
-  update(filename: string): void {
-    console.log(`${filename} has been updated`)
-  }
 
   subscribe(eventType: string, listener: EventListeners) {
     console.log("Subscribe")
